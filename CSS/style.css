@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #F5F5F5;
+}
+
+header{
+    height: 100px;
+}
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 180px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.menu nav ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    transition: opacity 300ms;
+}
+
+.menu nav ul li a:hover{
+    opacity: 0.6;
+}
+
+.btn__header-register,
+.btn__register-cover,.btn-success{
+    padding: 14px 50px;
+    border: none;
+    background: #000;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 300ms;
+}
+
+
+.btn__header-register:hover,
+.btn__register-cover:hover,.btn-success:hover{
+    background: #69F1A1;
+    color: #000;
+}
+
+#icon_menu{
+    display: none;
+}
+
+
+main{
+    max-width: 1200px;
+    height: calc(100vh + 800px);
+    padding: 40px;
+    margin: auto;
+}
+
+.cover{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.text__information-cover{
+    width: 50%;
+}
+
+.text__information-cover h1{
+    font-size: 50px;
+}
+
+.text__information-cover p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.buttons__cover{
+    display: flex;
+    margin-top: 40px;
+}
+
+.btn__readMore-cover{
+    padding: 14px 40px;
+    border: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 300ms;
+}
+
+.btn__readMore-cover:hover{
+    background: #E8E8E8;
+}
+
+
+
+
+@media (max-width: 1024px){
+
+    .container__header,
+    main{
+        padding: 20px;
+    }
+
+    #icon_menu{
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .header__register{
+        display: none;
+    }
+
+    .menu{
+        height: 0px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+    }
+
+    .menu nav ul{
+        padding: 20px 0px;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    .menu nav ul li{
+        padding: 10px 40px;
+    }
+
+    .mostrar_menu{ 
+        height: 235px;
+    }
+
+    .text__information-cover h1{
+        font-size: 40px;
+    }
+
+    .text__information-cover p{
+        font-size: 16px;
+    }
+}
+
+.login{ 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:300px;
+	height:300px;
+}
+
+.login h1 {  text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+input { 
+	width: 100%; 
+	margin-bottom: 10px; 
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+.forgot{ 
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:300px;
+	height:300px;
+}
+.Registro-Jugador{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width:300px;
+    height:300px;
+    
+}
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    color: #F5F5F5;
+}
+footer a{
+    color: #F5F5F5;
+    font-size: 26px;
+    align-items: center;
+}
+.foter-a{
+    width: 200px;
+    height: 50px;
+  
+    position: relative;
+    left: 30px;
+    top: 75px;
+   
+}
+.address-footer{
+    width: 600px;
+    position: relative;
+    left: 50%;
+}
