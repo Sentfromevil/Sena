@@ -12,7 +12,7 @@
     <div class="login">
         <h1>BIENVENIDO</h1>
         <form name="Flogin" method="post" action="send.php">
-            <input type="text" name="u" placeholder="Usuario" required="required" />
+            <input type="text" name="u" placeholder="Usuario" required="required" pattern="[a-zA-Z0-9]+" />
             <input type="password" name="p" placeholder="Contraseña" required="required" />
             <a href="olvistate-contraseña.html">¿Olvidaste tú contraseña?</a><br>
             <input  type="submit"  class="btn__header-register" value="Iniciar sesion">
