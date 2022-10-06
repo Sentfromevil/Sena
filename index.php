@@ -37,12 +37,12 @@
                     <input type="password" name="" placeholder="Contraseña" >
                     <button>Entrar</button>
                 </form>
-                <form action="" class="formulario-register">
+                <form action="php/registro_usuario_db.php" method="POST" class="formulario-register">
                     <h2>Regístrarse</h2>
-                    <input type="text" name="" placeholder="Nombre completo" >
-                    <input type="text" name="" placeholder="Correo" >
-                    <input type="text" name="" placeholder="usuario" >
-                    <input type="password" name="" placeholder="Contraseña" >
+                    <input type="text" name="nombre" placeholder="Nombre completo" >
+                    <input type="text" name="correo" placeholder="Correo" >
+                    <input type="text" name="usuario" placeholder="Usuario" >
+                    <input type="password" name="contrasena" placeholder="Contraseña" >
                     <button>Regístrarse</button>
                 </form>
             </div>
