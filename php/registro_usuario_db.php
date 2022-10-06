@@ -11,7 +11,16 @@
               VALUES('$nombre','$correo','$usuario','$contrasena')";
 
     $ejecutar  = mysqli_query($conexion,$query);
-    
+
+    if($ejecutar){
+        echo'
+            <script>
+                alert("Usuario registrado exitosamentess");
+            </script>
+        
+        ';
+    }
+
 
 
 ?>
