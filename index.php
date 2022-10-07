@@ -1,6 +1,10 @@
 <?php
-  header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-  header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+    session_start();
+    if(isset($_SESSION['usuario'])){
+        header("location: HTML/pagina-administrador.php");
+        session_destroy();
+
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,10 +35,10 @@
                 </div>
             </div>
             <div class="contenedor-login-register">
-                <form action="" class="formulario-login">
+                <form action="php/login_usuario_be.php" method="POST" class="formulario-login">
                     <h2>Iniciar sesión</h2>
-                    <input type="text" name="" placeholder="Correo" >
-                    <input type="password" name="" placeholder="Contraseña" >
+                    <input type="text" name="correo" placeholder="Correo" >
+                    <input type="password" name="contrasena" placeholder="Contraseña" >
                     <button>Entrar</button>
                 </form>
                 <form action="php/registro_usuario_db.php" method="POST" class="formulario-register">

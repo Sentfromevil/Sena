@@ -1,3 +1,21 @@
+<?php 
+
+  session_start();
+  if(!isset($_SESSION['usuario'])){
+    echo'
+      <script>
+          alert("Por favor iniciar sesion")
+          window.location = "../index.php"
+      </script>
+
+    ';
+    session_destroy();
+    die();
+
+  }
+ 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +29,7 @@
 </head>
 <body>
  <Nav>
-    <a href="/HTML/Principal.html">Salir</a>
+    <a href="../php/cerrar_sesion.php">Salir</a>
     <h1>Escuela Futbol Club</h1>
  </Nav>   
  <hr>
