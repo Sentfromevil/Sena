@@ -4,7 +4,7 @@
 
     $correo = $_POST['correo'];
     $contrasena = $_POST['contrasena'];
-    $contrasena = hash('sha512',$contrasena)
+    $contrasena = hash('sha512',$contrasena);
 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo ='$correo' and contrasena = '$contrasena'");
 
@@ -16,12 +16,12 @@
         echo'
             <script>    
                 alert("Usuario no existe");
-                windows.location = "../index.php";
+                windows.location = "../index.php"
             </script>
             
 
         ';
-    }
+    }   
 
 
 
