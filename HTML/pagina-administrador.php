@@ -1,18 +1,17 @@
-<?php 
+<?php  
+ include '../php/conexion_be.php';
+
   session_start();
-  if(!isset($_SESSION['usuario'])){
-    echo'
-      <script>
-          alert("Por favor iniciar sesion")
-          window.location = "../index.php"
-      </script>
 
-    ';
-    session_destroy();
-    die();
+	if (isset($_SESSION['usuario'])) {
+		if ($_SESSION['cargo'] == 2 ) {
+			header("Location: pagina-entrenador.php");
+		}
+	} else {
+		header("Location: index.php");
+	}
 
-  }
- 
+?>
 
 ?>
 <!DOCTYPE html>

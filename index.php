@@ -1,12 +1,25 @@
 <?php
     session_start();
-    if(isset($_SESSION['usuario'])){
-        header("location: HTML/pagina-administrador.php");
-        session_destroy();
 
+
+    if(isset($_SESSION['cargo'])){
+        switch($_SESSION['cargo']){
+            case 1:
+            header('location:HTML/pagina-administrador.php');
+            break;
+            case 2:
+            header('location:HTML/pagina-entrenador.php');
+            break; 
+             case 3:
+            header('location:HTML/pagina-jugador.php');
+            break;
+        }
     }
+
+
+
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html>s
 <html lang="es">
 <head>
     <meta charset="UTF-8">

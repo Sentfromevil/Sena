@@ -1,3 +1,19 @@
+<?php  
+ include '../php/conexion_be.php';
+ session_start();
+
+ if (isset($_SESSION['usuario'])) {
+   if ($_SESSION['cargo'] == 1 ) {
+     header("Location: pagina-administrador.php");
+   }
+ } else {
+   header("Location: index.php");
+ }
+
+?>
+ 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +27,7 @@
 </head>
 <body>
  <Nav>
-    <a href="/index.html">Salir</a>
+ <a href="../php/cerrar_sesion.php">Salir</a>
     <h1>Escuela Futbol Club</h1>
  </Nav>   
  <hr>

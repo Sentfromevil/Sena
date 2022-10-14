@@ -6,8 +6,7 @@
     $correo= $_POST['correo'];
     $usuario= $_POST['usuario'];
     $contrasena= $_POST['contrasena'];
-    $contrasena= hash('sha512', $contrasena);
-
+    
     $query = "INSERT INTO usuarios(nombre,correo,usuario,contrasena)
               VALUES('$nombre','$correo','$usuario','$contrasena')";
 //verificacion de registro
