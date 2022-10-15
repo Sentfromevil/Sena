@@ -5,13 +5,13 @@
     if(isset($_SESSION['cargo'])){
         switch($_SESSION['cargo']){
             case 1:
-            header('location:HTML/pagina-administrador.php');
+            header('location:php/pagina-administrador.php');
             break;
             case 2:
-            header('location:HTML/pagina-entrenador.php');
+            header('location:php/pagina-entrenador.php');
             break; 
              case 3:
-            header('location:HTML/pagina-jugador.php');
+            header('location:php/pagina-jugador.php');
             break;
         }
     }
