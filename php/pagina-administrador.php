@@ -109,13 +109,12 @@
  <div id="Mensualidad" class="tabcontent">
   <div class="formulario-mensualidad">
   <h2>ingrese datos</h2>
-    <form action="insertar-mensualidad.php" method="POST">
+    <form action="insertar-mes.php" method="POST">
       <input type="text" placeholder="Identificacion" name="identificacion">
       <input type="text" placeholder="estado"  name="estado">
       <input type="date" placeholder="fecha" name="fecha">
       <input type="text" placeholder="monto" name="monto">
-      <button class=".caja-trasera button">Enviar</button>
-
+      <input type="submit" value="Enviar">
   </div>
    <div class="container mt-3">
       <table class="table">
@@ -153,10 +152,10 @@
  </div>
  
  <div id="Entrenadores" class="tabcontent">
- <div class="formulario-jugadores">
+ <div class="formulario-entrenadores">
     <h2>ingrese datos</h2>
-    <form action="insertar-entrenadores.php" method="POST">
-      <input type="text" placeholder="Identificacion" name="identificacion">
+    <form action="../php/insertar-entrenadores.php" method="POST">
+      <input type="text" placeholder="Identificacion" name="identificacionE">
       <input type="text" placeholder="Nombre"  name="nombre">
       <input type="text" placeholder="Apellido" name="apellido">
       <input type="date" placeholder="Fecha de Nacimiento" name="fechan">
@@ -170,7 +169,7 @@
     </form>
    
   </div>
-   <div class="container mt-3">
+   <div class="container mt-3">s
       <table class="table">
        <thead class="table-dark">
          <tr>
@@ -185,6 +184,8 @@
            <th>Telefono</th>
            <th>Edad</th>
            <th>Estudios</th>
+           <th>Actualizar</th>
+            <th>Eliminar</th>
          </tr>
        </thead>
        <tbody>
@@ -195,7 +196,7 @@
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
-            <td><?php  echo $mostrar['identificacion']?></td>
+            <td><?php  echo $mostrar['identificacionE']?></td>
             <td><?php  echo $mostrar['nombre']?></td>
             <td> <?php  echo $mostrar['apellido']?></td>
             <td> <?php  echo $mostrar['fechan']?></td>
@@ -205,7 +206,7 @@
             <td> <?php  echo $mostrar['telefono']?></td>
             <td> <?php  echo $mostrar['edad']?></td>
             <td> <?php  echo $mostrar['estudios']?></td>
-            <th><a href="actualizar-jugadores.php?id=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
+            <th><a href="actualizar-entrenadores.php?id=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
             <th><a href="delete.php?id=<?php echo $mostrar['identificacion'] ?>" class="btn btn-danger">Eliminar</a></th>
           </tr>
           <?php 

@@ -44,7 +44,7 @@
                 <p>Formar de manera integral a través del fútbol a nuestros alumnos, mejorando su calidad de vida con el buen uso del tiempo libre y con una sana recreación.</p>
 
                 <div class="buttons__cover">
-                    <a href="/HTML/Login.html" class="btn btn-success">Inscribete</a>
+                    <a href="../php/Login.html" class="btn btn-success">Inscribete</a>
                     
                 </div>
 

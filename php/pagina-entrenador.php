@@ -30,7 +30,7 @@
  </Nav>   
  <hr>
  <div class="photo">
-    <img src="/Images/Ep10Roberta205.webp" width="83px" height="98px" alt="">
+    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width="83px" height="98px" alt="">
  </div>
 <b><P>Entrenador</P></b>
 <p>Rosarita Cisneros</p>
@@ -39,38 +39,51 @@
    </div> 
  
  <div id="Rendimiento-Deportista" class="tabcontent">
+
+ <div class="formulario-rendimiento">
+    <h2>ingrese datos</h2>
+    <form action="insert-resistencia.php" method="POST">
+       <input type="text" placeholder="Identificacion" name="identificacion">
+      <input type="text" placeholder="Nombre" name="nombre">
+      <input type="text" placeholder="Definicion"  name="definicion">
+      <input type="text" placeholder="resistencia" name="resistencia">
+      <button class=".caja-trasera button">Enviar</button>
+    </form>
+   
+  </div>
    <div class="container mt-3">
        <table class="table">
         <thead class="table-dark">
           <tr>
+          <th>Identificacion</th>
             <th>Nombre</th>
             <th>Definicion</th>
             <th>Resistencia</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>eren jaeger</td>
-            <td>78%</td>
-            <td>73%</td>
-            
-          </tr>
-          <tr>
-            <td>Levi Akerman</td>
-            <td>100%</td>
-            <td>80%</td>
+        <tr>
+         <?php 
+		$sql="SELECT * from rendimiento";
+		$result=mysqli_query($conexion,$sql);
+
+		while($mostrar=mysqli_fetch_array($result)){
+		 ?>
+          
+           <td><?php  echo $mostrar['identificacion']?></td>
+           <td><?php  echo $mostrar['nombre']?></td>
+           <td><?php  echo $mostrar['definicion']?></td>
+           <td><?php  echo $mostrar['resistencia']?></td>
+           <td><?php  echo $mostrar['anotaciones']?></td>
            
-          </tr>
-          <tr>
-            <td>Makoto Furukawa</td>
-            <td>100%</td>
-            <td>100%</td>
-            
-          </tr>
+         </tr>
+         <?php 
+                 } ?>
+          
         </tbody>
       </table>
     </div>
-    <button style='font-size:24px'>Create <i class='fas fa-edit'></i></button>
+    
  </div>
  
  

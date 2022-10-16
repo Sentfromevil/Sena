@@ -1,7 +1,6 @@
 <?php
 include("conexion_be.php");
 session_start();
-$id_mensualidad=$_POST['id_mensualidad'];
 $identificacion=$_POST['identificacion'];
 $estado=$_POST['estado'];
 $fecha=$_POST['fecha'];
@@ -12,7 +11,7 @@ $query = "INSERT INTO mensualidad(identificacion,estado,fecha,monto)
               VALUES('$identificacion','$estado','$fecha', '$monto')";
 
 //verificacion de registro
- 
+$verificar_mensualidad = mysqli_query($conexion,"SELECT * FROM mensualidad WHERE identificacion ='$identificacion' ");
     echo $query;
     $ejecutar  = mysqli_query($conexion,$query);
 

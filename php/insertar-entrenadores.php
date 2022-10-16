@@ -2,7 +2,7 @@
 include("conexion_be.php");
 session_start();
 
-$identificacion=$_POST['identificacion'];
+$identificacionE=$_POST['identificacionE'];
 $nombre=$_POST['nombre'];
 $apellido=$_POST['apellido'];
 $fechan=$_POST['fechan'];
@@ -11,13 +11,13 @@ $ciudad=$_POST['ciudad'];
 $departamento=$_POST['departamento'];
 $telefono=$_POST['telefono'];
 $edad=$_POST['edad'];
-$tipo=$_POST['estudios'];
+$estudios=$_POST['estudios'];
 
-$query = "INSERT INTO entrenadores(identificacion,nombre,apellido,fechan,direccion,ciudad,departamento,telefono,edad,estudios)
-              VALUES('$identificacion','$nombre','$apellido','$fechan', '$direccion','$ciudad','$departamento','$telefono','$edad','$estudios')";
+$query = "INSERT INTO entrenadores(identificacionE,nombre,apellido,fechan,direccion,ciudad,departamento,telefono,edad,estudios)
+              VALUES('$identificacionE','$nombre','$apellido','$fechan', '$direccion','$ciudad','$departamento','$telefono','$edad','$estudios')";
 
 //verificacion de registro
-    $verificar_identificacion = mysqli_query($conexion,"SELECT * FROM entrenadores WHERE identificacion='$identificacion' ");
+    $verificar_identificacion = mysqli_query($conexion,"SELECT * FROM entrenadores WHERE identificacionE ='$identificacionE' ");
 
 
     echo $query;

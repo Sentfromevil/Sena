@@ -19,17 +19,6 @@ $query = "INSERT INTO jugadores(identificacion,nombre,apellido,fechan,direccion,
 //verificacion de registro
     $verificar_identificacion = mysqli_query($conexion,"SELECT * FROM jugadores WHERE identificacion='$identificacion' ");
 
-    if(mysqli_num_rows($verificar_identificacion) > 0){
-          echo'
-            <script>    
-                alert("Este Jugadoru ya esta registrado");
-                window.location = "../php/pagina-administrador.php"
-            </script>
-
-          ';
-          exit();
-    }
-
     echo $query;
     $ejecutar  = mysqli_query($conexion,$query);
 
