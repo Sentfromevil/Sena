@@ -2,7 +2,7 @@
 include("conexion_be.php");
 session_start();
 
-$identificacionE=$_POST['identificacionE'];
+$identificacion=$_POST['identificacion'];
 $nombre=$_POST['nombre'];
 $apellido=$_POST['apellido'];
 $fechan=$_POST['fechan'];
@@ -13,12 +13,11 @@ $telefono=$_POST['telefono'];
 $edad=$_POST['edad'];
 $estudios=$_POST['estudios'];
 
-$query = "INSERT INTO entrenadores(identificacionE,nombre,apellido,fechan,direccion,ciudad,departamento,telefono,edad,estudios)
-              VALUES('$identificacionE','$nombre','$apellido','$fechan', '$direccion','$ciudad','$departamento','$telefono','$edad','$estudios')";
+$query = "INSERT INTO entrenador(identificacion,nombre,apellido,fechan,direccion,ciudad,departamento,telefono,edad,estudios)
+              VALUES('$identificacion','$nombre','$apellido','$fechan', '$direccion','$ciudad','$departamento','$telefono','$edad','$estudios')";
 
 //verificacion de registro
-    $verificar_identificacion = mysqli_query($conexion,"SELECT * FROM entrenadores WHERE identificacionE ='$identificacionE' ");
-
+    $verificar_identificacion = mysqli_query($conexion,"SELECT * FROM entrenador WHERE identificacion='$identificacion' ");
 
     echo $query;
     $ejecutar  = mysqli_query($conexion,$query);
@@ -31,9 +30,15 @@ $query = "INSERT INTO entrenadores(identificacionE,nombre,apellido,fechan,direcc
             </script>
         
         ';
-    }
+    }else{
+        echo'
+        <script>
+            alert("Intentalo nuevamente");
+            window.location= "../php/pagina-administrador.php"
+        </script>
     
- 
+    ';
+    }
 
 
 

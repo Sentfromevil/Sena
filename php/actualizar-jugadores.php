@@ -1,13 +1,6 @@
 <?php 
+ session_start();
     include("conexion_be.php");
-    
-
-$identificacion=$_GET['identificacion'];
-
-$sql="SELECT * FROM jugadores WHERE identificacion='$$identificacion'";
-$query=mysqli_query($conexion,$sql);
-
-$mostrar=mysqli_fetch_array($query);
 ?>
 
 <!DOCTYPE html>
@@ -25,16 +18,16 @@ $mostrar=mysqli_fetch_array($query);
                 <div class="container mt-5">
                     <form action="update.php" method="POST">
                     
-                                <input type="text" class="form-control mb-3" name="identificacion" value="<?php echo $mostar['identiificacion']  ?>">     
-                                <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre" value="<?php echo $mostar['nombre']  ?>">
-                                <input type="text" class="form-control mb-3" name="apellido" placeholder="Apellidos" value="<?php echo $mostrar['apellido']  ?>">
-                                <input type="text" class="form-control mb-3" name="fechan" placeholder="Fecha de nacimiento" value="<?php echo $mostrar['fechan']  ?>">
-                                <input type="text" class="form-control mb-3" name="direccion" placeholder="Direccion" value="<?php echo $mostar['direccion']  ?>">
-                                <input type="text" class="form-control mb-3" name="ciudad" placeholder="Ciudad" value="<?php echo $mostar['ciudad']  ?>">
-                                <input type="text" class="form-control mb-3" name="departamento" placeholder="Departamento" value="<?php echo $mostar['departamento']  ?>">
-                                <input type="text" class="form-control mb-3" name="telefono" placeholder="Telefono" value="<?php echo $mostar['telefono']  ?>">
-                                <input type="text" class="form-control mb-3" name="edad" placeholder="Edad" value="<?php echo $mostar['edad']  ?>">
-                                <input type="text" class="form-control mb-3" name="tipo" placeholder="tipo" value="<?php echo $mostar['tipo']  ?>">
+                                <input type="text" class="form-control mb-3" name="identificacion" placeholder="Identificacion">     
+                                <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre">
+                                <input type="text" class="form-control mb-3" name="apellido" placeholder="Apellidos" >
+                                <input type="text" class="form-control mb-3" name="fechan" placeholder="Fecha de nacimiento">
+                                <input type="text" class="form-control mb-3" name="direccion" placeholder="Direccion">
+                                <input type="text" class="form-control mb-3" name="ciudad" placeholder="Ciudad">
+                                <input type="text" class="form-control mb-3" name="departamento" placeholder="Departamento" >
+                                <input type="text" class="form-control mb-3" name="telefono" placeholder="Telefono" >
+                                <input type="text" class="form-control mb-3" name="edad" placeholder="Edad" >
+                                <input type="text" class="form-control mb-3" name="tipo" placeholder="tipo" >
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                     </form>
                     

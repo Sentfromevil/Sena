@@ -28,7 +28,7 @@
             </div>
             <i class="fa-solid fa-bars" id="icon_menu"></i>
             <div class="header__register">
-                <a href="http://localhost/sena/index.php" class="btn btn-success">Inicio Sesión</a>s
+                <a href="http://localhost/sena/index.php" class="btn btn-success">Inicio Sesión</a>
             </div>
         </div>
 

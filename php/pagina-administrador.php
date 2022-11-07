@@ -43,23 +43,7 @@
  </div> 
  
  <div id="Jugadores" class="tabcontent">
-  <div class="formulario-jugadores">
-    <h2>ingrese datos</h2>
-    <form action="insertar-jugadores.php" method="POST">
-      <input type="text" placeholder="Identificacion" name="identificacion">
-      <input type="text" placeholder="Nombre"  name="nombre">
-      <input type="text" placeholder="Apellido" name="apellido">
-      <input type="date" placeholder="Fecha de Nacimiento" name="fechan">
-      <input type="text" placeholder="Dirección" name="direccion">
-      <input type="text" placeholder="Ciudad" name="ciudad">
-      <input type="text" placeholder="Departamento" name="departamento">
-      <input type="text" placeholder="telefono" name="telefono">
-      <input type="text" placeholder="Edad" name="edad">
-      <input type="text" placeholder="Tipo" name="tipo">
-      <button class=".caja-trasera button">Enviar</button>
-    </form>
-   
-  </div>
+  
    <div class="container mt-3">
        <table class="table">
         <thead class="table-dark">
@@ -96,26 +80,34 @@
             <td> <?php  echo $mostrar['telefono']?></td>
             <td> <?php  echo $mostrar['edad']?></td>
             <td> <?php  echo $mostrar['tipo']?></td>
-            <th><a href="actualizar-jugadores.php?id=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
-            <th><a href="delete.php?id=<?php echo $mostrar['identificacion'] ?>" class="btn btn-danger">Eliminar</a></th>
+            <th><a href="actualizar-jugadores.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
+            <th><a href="delete.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-danger">Eliminar</a></th>
           </tr>
           <?php 
                  } ?>
         </tbody>
       </table>
+      <div class="formulario-jugadores">
+    <h2>ingrese datos</h2>
+    <form action="insertar-jugadores.php" method="POST">
+      <input type="text" placeholder="Identificacion" name="identificacion">
+      <input type="text" placeholder="Nombre"  name="nombre">
+      <input type="text" placeholder="Apellido" name="apellido">
+      <input type="date" placeholder="Fecha de Nacimiento" name="fechan">
+      <input type="text" placeholder="Dirección" name="direccion">
+      <input type="text" placeholder="Ciudad" name="ciudad">
+      <input type="text" placeholder="Departamento" name="departamento">
+      <input type="text" placeholder="telefono" name="telefono">
+      <input type="text" placeholder="Edad" name="edad">
+      <input type="text" placeholder="Tipo" name="tipo">
+      <button class=".caja-trasera button">Enviar</button>
+    </form>
+   
+  </div>
     </div>
  </div>
  
  <div id="Mensualidad" class="tabcontent">
-  <div class="formulario-mensualidad">
-  <h2>ingrese datos</h2>
-    <form action="insertar-mes.php" method="POST">
-      <input type="text" placeholder="Identificacion" name="identificacion">
-      <input type="text" placeholder="estado"  name="estado">
-      <input type="date" placeholder="fecha" name="fecha">
-      <input type="text" placeholder="monto" name="monto">
-      <input type="submit" value="Enviar">
-  </div>
    <div class="container mt-3">
       <table class="table">
        <thead class="table-dark">
@@ -125,6 +117,8 @@
            <th>Estado</th>
            <th>Fecha</th>
            <th>Monto</th>
+           <th>Actualizar</th>
+            <th>Eliminar</th>
            
          </tr>
        </thead>
@@ -141,39 +135,32 @@
            <td><?php  echo $mostrar['estado']?></td>
            <td><?php  echo $mostrar['fecha']?></td>
            <td><?php  echo $mostrar['monto']?></td>
+           <th><a href="actualizar-mensualidad.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
+            <th><a href="delete-men.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-danger">Eliminar</a></th>
            
          </tr>
          <?php 
                  } ?>
        </tbody>
      </table>
+     <div class="formulario-mensualidad">
+  <h2>ingrese datos</h2>
+    <form action="insertar-mes.php" method="POST">
+      <input type="text" placeholder="Identificacion" name="identificacion">
+      <input type="text" placeholder="estado"  name="estado">
+      <input type="date" placeholder="fecha" name="fecha">
+      <input type="text" placeholder="monto" name="monto">
+      <button class=".caja-trasera button">Enviar</button>
+  </div>
    </div>
 </div>
  </div>
  
  <div id="Entrenadores" class="tabcontent">
- <div class="formulario-entrenadores">
-    <h2>ingrese datos</h2>
-    <form action="../php/insertar-entrenadores.php" method="POST">
-      <input type="text" placeholder="Identificacion" name="identificacionE">
-      <input type="text" placeholder="Nombre"  name="nombre">
-      <input type="text" placeholder="Apellido" name="apellido">
-      <input type="date" placeholder="Fecha de Nacimiento" name="fechan">
-      <input type="text" placeholder="Dirección" name="direccion">
-      <input type="text" placeholder="Ciudad" name="ciudad">
-      <input type="text" placeholder="Departamento" name="departamento">
-      <input type="text" placeholder="telefono" name="telefono">
-      <input type="text" placeholder="Edad" name="edad">
-      <input type="text" placeholder="Estudios" name="estudios">
-      <button class=".caja-trasera button">Enviar</button>
-    </form>
-   
-  </div>
-   <div class="container mt-3">s
+   <div class="container mt-3">
       <table class="table">
        <thead class="table-dark">
          <tr>
-
             <th>identificacion</th>
            <th>Nombre</th>
            <th>Apellido</th>
@@ -191,12 +178,12 @@
        <tbody>
        <tr>
           <?php 
-		$sql="SELECT * from entrenadores";
+		$sql="SELECT * from entrenador";
 		$result=mysqli_query($conexion,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
-            <td><?php  echo $mostrar['identificacionE']?></td>
+            <td><?php  echo $mostrar['identificacion']?></td>
             <td><?php  echo $mostrar['nombre']?></td>
             <td> <?php  echo $mostrar['apellido']?></td>
             <td> <?php  echo $mostrar['fechan']?></td>
@@ -206,14 +193,31 @@
             <td> <?php  echo $mostrar['telefono']?></td>
             <td> <?php  echo $mostrar['edad']?></td>
             <td> <?php  echo $mostrar['estudios']?></td>
-            <th><a href="actualizar-entrenadores.php?id=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
-            <th><a href="delete.php?id=<?php echo $mostrar['identificacion'] ?>" class="btn btn-danger">Eliminar</a></th>
+            <th><a href="actualizar-entrenador.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
+            <th><a href="delete-entrenadores.php?identificacion=<?php echo $mostrar['identificacions'] ?>" class="btn btn-danger">Eliminar</a></th>
           </tr>
           <?php 
                  } ?>
         
        </tbody>
      </table>
+    <div class="formulario-entrenador">
+      <h2>ingrese datos</h2>
+      <form action="entrenador.php" method="POST">
+        <input type="text" placeholder="Identificacion" name="identificacion">
+        <input type="text" placeholder="Nombre"  name="nombre">
+        <input type="text" placeholder="Apellido" name="apellido">
+        <input type="date" placeholder="Fecha de Nacimiento" name="fechan">
+        <input type="text" placeholder="Dirección" name="direccion">
+        <input type="text" placeholder="Ciudad" name="ciudad">
+        <input type="text" placeholder="Departamento" name="departamento">
+        <input type="text" placeholder="telefono" name="telefono">
+        <input type="text" placeholder="Edad" name="edad">
+        <input type="text" placeholder="Estudios" name="estudios">
+        <button class=".caja-trasera button">Enviar</button>
+      </form>
+   
+    </div>
    </div>
 </div>
  </div>
