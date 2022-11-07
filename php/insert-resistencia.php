@@ -5,7 +5,7 @@ $identificacion=$_POST['identificacion'];
 $nombre=$_POST['nombre'];
 $definicion=$_POST['definicion'];
 $resistencia=$_POST['resistencia'];
-$manotaciones=$_POST['anotaciones'];
+$anotaciones=$_POST['anotaciones'];
 
 $query = "INSERT INTO rendimiento(identificacion,nombre,definicion,resistencia,anotaciones)
               VALUES('$identificacion','$nombre','$definicion', '$resistencia', '$anotaciones')";

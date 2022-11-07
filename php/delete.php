@@ -9,6 +9,14 @@ include("conexion_be.php");
     $_SESSION['message_type'] = 'danger';
     header('Location: pagina-administrador.php');
   
- 
+  /*
+$identificacion=$_GET['identificacion'];
+
+$sql="DELETE FROM jugadores  WHERE identificacion='$identificacion'";
+$query=mysqli_query($conexion,$sql);
+if($query){
+	Header("Location: pagina-administrador.php");
+}
+*/
     
 ?>

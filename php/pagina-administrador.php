@@ -143,14 +143,15 @@
                  } ?>
        </tbody>
      </table>
-     <div class="formulario-mensualidad">
+     <div class="formulario-jugadores">
   <h2>ingrese datos</h2>
     <form action="insertar-mes.php" method="POST">
       <input type="text" placeholder="Identificacion" name="identificacion">
       <input type="text" placeholder="estado"  name="estado">
       <input type="date" placeholder="fecha" name="fecha">
       <input type="text" placeholder="monto" name="monto">
-      <button class=".caja-trasera button">Enviar</button>
+      <input type="submit" value="Enviar">
+                </form>
   </div>
    </div>
 </div>
@@ -194,14 +195,14 @@
             <td> <?php  echo $mostrar['edad']?></td>
             <td> <?php  echo $mostrar['estudios']?></td>
             <th><a href="actualizar-entrenador.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
-            <th><a href="delete-entrenadores.php?identificacion=<?php echo $mostrar['identificacions'] ?>" class="btn btn-danger">Eliminar</a></th>
+            <th><a href="delete-entrenadores.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-danger">Eliminar</a></th>
           </tr>
           <?php 
                  } ?>
         
        </tbody>
      </table>
-    <div class="formulario-entrenador">
+    <div class="formulario-jugadores">
       <h2>ingrese datos</h2>
       <form action="entrenador.php" method="POST">
         <input type="text" placeholder="Identificacion" name="identificacion">

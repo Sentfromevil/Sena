@@ -39,18 +39,6 @@
    </div> 
  
  <div id="Rendimiento-Deportista" class="tabcontent">
-
- <div class="formulario-rendimiento">
-    <h2>ingrese datos</h2>
-    <form action="insert-resistencia.php" method="POST">
-       <input type="text" placeholder="Identificacion" name="identificacion">
-      <input type="text" placeholder="Nombre" name="nombre">
-      <input type="text" placeholder="Definicion"  name="definicion">
-      <input type="text" placeholder="resistencia" name="resistencia">
-      <button class=".caja-trasera button">Enviar</button>
-    </form>
-   
-  </div>
    <div class="container mt-3">
        <table class="table">
         <thead class="table-dark">
@@ -59,6 +47,9 @@
             <th>Nombre</th>
             <th>Definicion</th>
             <th>Resistencia</th>
+            <th>Anotaciones</th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -75,13 +66,26 @@
            <td><?php  echo $mostrar['definicion']?></td>
            <td><?php  echo $mostrar['resistencia']?></td>
            <td><?php  echo $mostrar['anotaciones']?></td>
-           
+           <th><a href="actualizar-rendimiento.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-info">Editar</a></th>
+            <th><a href="delete-rendimiento.php?identificacion=<?php echo $mostrar['identificacion'] ?>" class="btn btn-danger">Eliminar</a></th>
          </tr>
          <?php 
                  } ?>
           
         </tbody>
       </table>
+      <div class="formulario-rendimiento formulario-jugadores">
+    <h2>ingrese datos</h2>
+    <form action="insert-resistencia.php" method="POST">
+       <input type="text" placeholder="Identificacion" name="identificacion">
+      <input type="text" placeholder="Nombre" name="nombre">
+      <input type="text" placeholder="Definicion"  name="definicion">
+      <input type="text" placeholder="resistencia" name="resistencia">
+      <input type="text" placeholder="Anotaciones" name="anotaciones">
+      <button class=".caja-trasera button">Enviar</button>
+    </form>
+   
+  </div>
     </div>
     
  </div>

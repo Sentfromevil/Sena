@@ -109,7 +109,7 @@ hr{
 	border-top: none;
   }
 
-  .formulario-entrenadores form input,.formulario-mensualidad form input,.formulario-jugadores form input{
+  .formulario-entrenador.formulario-rendimiento form input,.formulario-mensualidad form input,.formulario-jugadores form input{
 	width: 300px;
   }
 
