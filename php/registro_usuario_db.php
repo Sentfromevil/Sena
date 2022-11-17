@@ -16,7 +16,7 @@
           echo'
             <script>    
                 alert("Este Correo ya esta registrado");
-                window.location = "../index.php"
+                window.location = "login.php"
             </script>
 
           ';
@@ -29,7 +29,7 @@
           echo'
             <script>    
                 alert("Este usuario ya esta registrado");
-                window.location = "../index.php"
+                window.location = "login.php"
             </script>
 
           ';
@@ -42,7 +42,7 @@
         echo'
             <script>
                 alert("Usuario registrado exitosamentes");
-                window.location= "../index.php"
+                window.location= "login.php"
             </script>
         
         ';
@@ -50,7 +50,7 @@
         echo'
         <script>
             alert("Intentalo nuevamente");
-            window.location= "../index.php"
+            window.location= "login.php"
         </script>
     
     ';

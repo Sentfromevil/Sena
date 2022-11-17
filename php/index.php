@@ -28,7 +28,7 @@
             </div>
             <i class="fa-solid fa-bars" id="icon_menu"></i>
             <div class="header__register">
-                <a href="http://localhost/sena/index.php" class="btn btn-success">Inicio Sesión</a>
+                <a href="login.php" class="btn btn-success">Inicio Sesión</a>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
                 <p>Formar de manera integral a través del fútbol a nuestros alumnos, mejorando su calidad de vida con el buen uso del tiempo libre y con una sana recreación.</p>
 
                 <div class="buttons__cover">
-                    <a href="../php/Login.html" class="btn btn-success">Inscribete</a>
+                    <a href="login.php" class="btn btn-success">Inscribete</a>
                     
                 </div>
 

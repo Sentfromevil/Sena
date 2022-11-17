@@ -29,7 +29,7 @@
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="../CSS/login.css">
     <title>login</title>
 </head>
 <body>
@@ -48,13 +48,13 @@
                 </div>
             </div>
             <div class="contenedor-login-register">
-                <form action="php/login_usuario_be.php" method="POST" class="formulario-login">
+                <form action="login_usuario_be.php" method="POST" class="formulario-login">
                     <h2>Iniciar sesión</h2>
                     <input type="text" name="correo" placeholder="Correo" >
                     <input type="password" name="contrasena" placeholder="Contraseña" >
                     <button>Entrar</button>
                 </form>
-                <form action="php/registro_usuario_db.php" method="POST" class="formulario-register">
+                <form action="registro_usuario_db.php" method="POST" class="formulario-register">
                     <h2>Regístrarse</h2>
                     <input type="text" name="nombre" placeholder="Nombre completo" >
                     <input type="text" name="correo" placeholder="Correo" >
